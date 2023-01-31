@@ -1,0 +1,7 @@
+body div {
+    padding-top: 1cm;
+    padding-left: 0.5cm;
+}
+body {
+    overflow: auto;
+}

@@ -1,0 +1,8 @@
+/* additional definition for 2-column toolbar */
+div.textareaInserts div.toolbar > div:nth-child(n+3) {
+	border-top: none;
+}
+
+div.textareaInserts div.toolbar > div:nth-child(2n+1) {
+	border-left: 1px solid black !important;
+}

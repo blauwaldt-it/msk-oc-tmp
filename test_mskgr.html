@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <script src="dist/mskgr.js"></script>
+    </head>
+    <body>
+
+        <div id="container"></div>
+        <script>
+
+            function init () {
+
+                const base = new mskgr.baseInits({
+                    container: 'container',
+                });
+
+                const width = 250;
+                const height = 20;
+                const sliderHeight = 40;
+
+                const slider = new mskgr.barSlider( base, {
+
+                    x: 30, y: 30,
+                    width, height,
+                    sliderHeight,
+                    labels: [
+                        { val: 0, text: '0 %', },
+                        { val: 1, text: '100 %', },
+                    ],
+                } );
+            }
+
+            window.addEventListener( 'DOMContentLoaded', init );
+        </script>
+    </body>
+</html>

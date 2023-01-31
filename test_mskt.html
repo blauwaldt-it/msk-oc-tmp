@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="dist/mskt.css">
+        <script src="dist/mskt.js"></script>
+    </head>
+    <body>
+
+        <div id="container"></div>
+        <script>
+
+            function init () {
+
+                const base = new mskt.baseInits();
+                const ti = new mskt.textareaInserts( '#container', {
+
+                    divStyles: {
+                        width: `${window.innerWidth/2}px`,
+                        height: `${window.innerHeight/2}px`,
+                    },
+
+                    toolbar: mskt.toolbarMathOperatorsFraction,
+
+                }, base );
+            }
+
+            window.addEventListener( 'DOMContentLoaded', init );
+        </script>
+    </body>
+</html>
