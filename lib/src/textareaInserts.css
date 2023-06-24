@@ -13,7 +13,7 @@ div.textareaInserts > div:first-child {
     background-color: #fff2cc;
     border: 1px solid #ffcd00;
     overflow: auto;
-    white-space: pre;
+    white-space: pre-wrap;
 }
 div.textareaInserts > div:first-child:empty:before {
     content: " ";
@@ -68,7 +68,8 @@ div.textareaInserts .frac {
     letter-spacing: 0.001em;
     text-align: center;
     white-space: normal;
-    margin-bottom: 0.2em;   /* vetical centering */
+    /* margin-bottom: 0.2em;   /* vertical centering */
+    padding: 0px;
 }
 div.textareaInserts .frac > span {
     display: block;
@@ -83,7 +84,7 @@ div.textareaInserts .frac span:empty:before {
     content: "⬚";
 }
 div.textareaInserts div.toolbar .frac span {
-    font-size: 75%;
+    /* font-size: 90%; */
     padding-left: 0.1em;
     padding-right: 0.1em;
 }

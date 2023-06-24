@@ -2,8 +2,7 @@
 
 Dies ist eine Open-Source Bibliothek, die eine Auswahl von interaktiven MSK-Items für den DIPF ItemBuilder als "external pageframes" (Einbettung in iframes) zur Verfügung stellt.
 
-<br>(Projektvorstellung)
-<br>
+[//]: # (Projektvorstellung)
 
 Ziel der Entwicklung war nicht nur die Umsetzung der konkreten Items, sondern die Schaffung einer Bibliothek, die sich möglichst flexibel durch Konfigurationen an die genaue Ausgestaltung von ähnlichen Items dieser Art anpassen lässt. Der hier veröffentlichte Quelltext ist Ergebnis eines Prozesses mit mehrfachen Änderungen der Anforderungen, was im Ergebnis hier und da zu ggf. umständlicheren Umsetzungen führte. Der Stand kann als "Snapshot" der aktuellen Arbeit gesehen werden, keinesfalls als abgeschlossenes Produkt. So ist z.B. zum Zeitpunkt der Veröffentlichung das Applet `ruler` nicht fertiggestellt, da es im Rahmen des Projektes nicht zum Einsatz kommen sollte.
 
