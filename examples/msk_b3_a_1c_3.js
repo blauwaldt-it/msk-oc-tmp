@@ -1,7 +1,7 @@
 import './main.css'
 
-import { baseInits } from '../lib/baseInits'
-import { bars_freePaint } from '../lib/bars'
+import { baseInits } from '../libs/baseInits'
+import { bars_freePaint } from '../libs/bars'
 
 const varNam = "1c_3";
 

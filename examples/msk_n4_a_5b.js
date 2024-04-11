@@ -1,7 +1,7 @@
 import './main.css'
 
-import { baseInits } from '../lib/baseInits'
-import { numberLineWithArcs } from '../lib/numberLineWithArcs'
+import { baseInits } from '../libs/baseInits'
+import { numberLineWithArcs } from '../libs/numberLineWithArcs'
 
 const tol = 0.5;
 
@@ -60,10 +60,10 @@ window.setState = io.setState.bind(io);
 
 ///////////////////////////////
 
-import demo_cursor from '../lib/img/demo_cursor.png'
-import demo_cursor_click from '../lib/img/demo_cursor_click.png'
+import demo_cursor from '../libs/img/demo_cursor.png'
+import demo_cursor_click from '../libs/img/demo_cursor_click.png'
 
-import { demoAni } from '../lib/demoAni'
+import { demoAni } from '../libs/demoAni'
 
 const startDemoAni = !( new URL( window.location.href ) ).searchParams.has('noDemoAni');
 

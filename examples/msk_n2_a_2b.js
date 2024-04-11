@@ -1,9 +1,9 @@
 import './main.css'
 
-import { baseInits } from '../lib/baseInits'
-import { numberLineWithAnnotations } from '../lib/numberLineWithAnnotations'
+import { baseInits } from '../libs/baseInits'
+import { numberLineWithAnnotations } from '../libs/numberLineWithAnnotations'
 
-import { isBetween } from '../lib/common'
+import { isBetween } from '../libs/common'
 
 const varNam = "2b";
 

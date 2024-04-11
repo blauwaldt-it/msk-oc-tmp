@@ -7,8 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode=production",
     "dev": "webpack --mode=development",
-    "examples": "webpack --config webpack.examples.config.js --mode=development",
-    "serve": "webpack serve --mode=development"
+    "serve": "webpack serve --mode=development",
+    "libs": "webpack --config webpack.libs.config.js --mode=production",
+    "libsdev": "webpack --config webpack.libs.config.js --mode=development",
+    "examples": "webpack --config webpack.examples.config.js --mode=development"
   },
   "author": "Marc A. Müller",
   "license": "MIT",
@@ -27,6 +29,8 @@
     "webpack-dev-server": "^4.7.3"
   },
   "dependencies": {
+    "@json-editor/json-editor": "^2.14.1",
+    "canvas2svg": "^1.0.16",
     "core-js": "^3.26.1",
     "konva": "^8.3.2"
   },

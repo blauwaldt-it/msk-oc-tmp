@@ -1,10 +1,10 @@
 import './main.css'
 
-import { baseInits } from '../lib/baseInits'
+import { baseInits } from '../libs/baseInits'
 /// #if __param1 == 'paint'
-import { inputGrid_freePaint_InsertButtons_switch } from '../lib/inputGrid'
+import { inputGrid_freePaint_InsertButtons_switch } from '../libs/inputGrid'
 /// #else
-import { inputGrid_InsertButtons } from '../lib/inputGrid'
+import { inputGrid_InsertButtons } from '../libs/inputGrid'
 /// #endif
 
 const cell = {

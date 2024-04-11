@@ -1,8 +1,8 @@
 import './main.css'
 import './textareaInserts_2cols.css'
 
-import { baseInits } from '../lib/baseInits'
-import { textareaInserts, toolbarFraction, toolbarMathOperators, toolbarMathOperatorsFraction, toolbarMathOperatorsFractionComparison } from '../lib/textareaInserts'
+import { baseInits } from '../libs/baseInits'
+import { textareaInserts, toolbarFraction, toolbarMathOperators, toolbarMathOperatorsFraction, toolbarMathOperatorsFractionComparison } from '../libs/textareaInserts'
 
 const toolbarCellWidth = 30;
 

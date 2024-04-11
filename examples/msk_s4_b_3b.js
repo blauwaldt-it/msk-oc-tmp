@@ -1,7 +1,7 @@
 import './main.css'
 
-import { baseInits } from '../lib/baseInits'
-import { barPlot } from '../lib/barPlot'
+import { baseInits } from '../libs/baseInits'
+import { barPlot } from '../libs/barPlot'
 
 const base = new baseInits( { container: 'container' } );
 

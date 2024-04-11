@@ -1,7 +1,7 @@
 import './main.css'
 
-import { baseInits } from '../lib/baseInits'
-import { filledBar } from '../lib/filledBar'
+import { baseInits } from '../libs/baseInits'
+import { filledBar } from '../libs/filledBar'
 
 const varNam = "1c_1";
 

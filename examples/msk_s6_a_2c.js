@@ -1,9 +1,9 @@
 import './main.css'
 
-import { isBetween, object_equals } from '../lib/common'
+import { isBetween, object_equals } from '../libs/common'
 
-import { baseInits } from '../lib/baseInits'
-import { barSlider_freePaint_freeLabels_insertButtons } from '../lib/barSlider'
+import { baseInits } from '../libs/baseInits'
+import { barSlider_freePaint_freeLabels_insertButtons } from '../libs/barSlider'
 
 const varNam = "2c";
 

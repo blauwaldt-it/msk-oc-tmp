@@ -1,7 +1,7 @@
 import './main.css'
 
-import { baseInits } from '../lib/baseInits'
-import { barSlider_freePaint } from '../lib/barSlider'
+import { baseInits } from '../libs/baseInits'
+import { barSlider_freePaint } from '../libs/barSlider'
 
 const varNam = "3b_bar";
 

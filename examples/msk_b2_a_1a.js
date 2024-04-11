@@ -1,7 +1,7 @@
 import './main.css'
 
-import { baseInits } from '../lib/baseInits'
-import { rectArea_freePaintMarker } from '../lib/rectArea'
+import { baseInits } from '../libs/baseInits'
+import { rectArea_freePaintMarker } from '../libs/rectArea'
 
 import Konva from 'konva/lib/Core'
 import { Rect } from 'konva/lib/shapes/Rect'

@@ -1,7 +1,7 @@
 import './main.css'
 
-import { baseInits } from '../lib/baseInits'
-import { numbersByPictures } from '../lib/numbersByPictures'
+import { baseInits } from '../libs/baseInits'
+import { numbersByPictures } from '../libs/numbersByPictures'
 
 const base = new baseInits( { container: 'container' } );
 

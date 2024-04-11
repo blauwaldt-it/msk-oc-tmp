@@ -1,7 +1,7 @@
 import './main.css'
 
-import { baseInits } from '../lib/baseInits'
-import { ruler } from '../lib/ruler';
+import { baseInits } from '../libs/baseInits'
+import { ruler } from '../libs/ruler';
 
 const base = new baseInits( { container: 'container' } );
 

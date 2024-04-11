@@ -1,14 +1,14 @@
 import './main.css'
 
-import { baseInits } from '../lib/baseInits'
-import { stampImages } from '../lib/stampImages'
-import { demoAni } from '../lib/demoAni'
+import { baseInits } from '../libs/baseInits'
+import { stampImages } from '../libs/stampImages'
+import { demoAni } from '../libs/demoAni'
 
-import child from '../lib/img/child.png'
-import dot from '../lib/img/dot.png'
+import child from '../libs/img/child.png'
+import dot from '../libs/img/dot.png'
 
-import demo_cursor from '../lib/img/demo_cursor.png'
-import demo_cursor_click from '../lib/img/demo_cursor_click.png'
+import demo_cursor from '../libs/img/demo_cursor.png'
+import demo_cursor_click from '../libs/img/demo_cursor_click.png'
 
 const base = new baseInits( { container: 'container' } );
 

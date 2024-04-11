@@ -1,8 +1,8 @@
 import './main.css'
 
-import { baseInits } from '../lib/baseInits'
-import { barPlot } from '../lib/barPlot'
-import { isBetween } from '../lib/common';
+import { baseInits } from '../libs/baseInits'
+import { barPlot } from '../libs/barPlot'
+import { isBetween } from '../libs/common';
 
 const base = new baseInits( { container: 'container' } );
 

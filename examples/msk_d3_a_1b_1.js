@@ -1,7 +1,7 @@
 import './main.css'
 
-import { baseInits } from '../lib/baseInits'
-import { numberLineWithArcs } from '../lib/numberLineWithArcs'
+import { baseInits } from '../libs/baseInits'
+import { numberLineWithArcs } from '../libs/numberLineWithArcs'
 
 const varNam = "1b_1";
 const inputRegexp = '^(\\d{0,5}|\\d{4}[,.]\\d{0,1}|\\d{3}[,.]\\d{0,2}|\\d{2}[,.]\\d{0,3}|\\d{1}[,.]\\d{0,4})$';

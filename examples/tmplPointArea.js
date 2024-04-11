@@ -1,7 +1,7 @@
 import './main.css'
 
-import { baseInits } from '../lib/baseInits'
-import { pointArea } from '../lib/pointArea';
+import { baseInits } from '../libs/baseInits'
+import { pointArea } from '../libs/pointArea';
 
 const base = new baseInits( { container: 'container' } );
 

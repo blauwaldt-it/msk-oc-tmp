@@ -1,13 +1,13 @@
 import './main.css'
 
-import { baseInits } from '../lib/baseInits'
-import { numberLineWithArcs } from '../lib/numberLineWithArcs'
-import { demoAni } from '../lib/demoAni'
+import { baseInits } from '../libs/baseInits'
+import { numberLineWithArcs } from '../libs/numberLineWithArcs'
+import { demoAni } from '../libs/demoAni'
 
-import { isBetween } from '../lib/common'
+import { isBetween } from '../libs/common'
 
-import demo_cursor from '../lib/img/demo_cursor.png'
-import demo_cursor_click from '../lib/img/demo_cursor_click.png'
+import demo_cursor from '../libs/img/demo_cursor.png'
+import demo_cursor_click from '../libs/img/demo_cursor_click.png'
 
 const varNam = "1a_1";
 

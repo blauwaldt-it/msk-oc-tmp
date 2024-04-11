@@ -1,9 +1,9 @@
 import './main.css'
 import './textareaInserts_2cols.css'
 
-import { baseInits } from '../lib/baseInits'
-import { textareaInserts, toolbarMathOperatorsFraction } from '../lib/textareaInserts'
-import { rectArea_freePaint } from '../lib/rectArea'
+import { baseInits } from '../libs/baseInits'
+import { textareaInserts, toolbarMathOperatorsFraction } from '../libs/textareaInserts'
+import { rectArea_freePaint } from '../libs/rectArea'
 
 ///////////////////////////////////////
 

@@ -25,6 +25,7 @@ import { inputInsertsFromSchema } from './class_extensions/inputInserts';
 import inputInsertsJSONchema from './schemes/inputInserts.schema.json';
 import inputInsertsSVG from './svgs/inputInserts.svg';
 
+//////////////////////////////////////////////////////////////////////////////
 
 import { baseInits } from '../libs/baseInits';
 let base = getBase();
@@ -34,9 +35,9 @@ let creator = null;
 let editor;
 let schemaData;
 
-import { JSONEditor } from './jsoneditor'
-import { object_equals } from '../libs/common';
+import { JSONEditor } from '@json-editor/json-editor';
 // window.JSONEditor = JSONEditor;
+import { object_equals } from '../libs/common';
 
 function searchSchemaData( json ) {
 

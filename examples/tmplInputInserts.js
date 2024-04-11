@@ -1,8 +1,8 @@
 import './main.css'
 
-import { baseInits } from '../lib/baseInits'
-import { inputInserts } from '../lib/inputInserts'
-import { toolbarMathOperators } from '../lib/textareaInserts'
+import { baseInits } from '../libs/baseInits'
+import { inputInserts } from '../libs/inputInserts'
+import { toolbarMathOperators } from '../libs/textareaInserts'
 
 const base = new baseInits();
 

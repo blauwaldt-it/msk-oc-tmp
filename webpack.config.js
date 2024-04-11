@@ -1,6 +1,7 @@
 const path = require('path');
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const babel_loader = {
 	test: /\.(js)$/,
@@ -24,94 +25,82 @@ const babel_loader = {
 	}],
 }
 
-module.exports = [{
+function getCfg ( env, argv ) {
 
-	/////////////////////////////////// MSK Text
+	const outName = 'jsonEditor';
+	const srcDir = './json_editor';
 
-	entry: './lib/mskt.js',
+	return {
 
-	output: {
-		path: path.resolve(__dirname, 'dist/libs'),
-		filename: 'mskt.js',
-		library: 'mskt',
-		libraryTarget: 'umd',
-		umdNamedDefine: true
-	},
+		entry: `${srcDir}/main.js`,
 
-	devtool: false,
+		output: {
+			path: path.resolve(__dirname, 'dist/jsonEditor'),
+			filename: `${outName}.js`,
+		},
 
-	module: {
-		rules: [
-			{
-				test: /\.css$/,
-				use: [ MiniCssExtractPlugin.loader, 'css-loader' ],
-				exclude: /node_modules/,
-			},{
-				test: /\.(png|svg)$/,
-				type: 'asset/inline',
-			},
-			babel_loader,
+		devtool: argv.mode==='production' ? undefined : 'source-map',
+
+		module: {
+			rules: [
+				{
+					test: /\.css$/,
+					use: [ MiniCssExtractPlugin.loader, 'css-loader' ],
+					exclude: /node_modules/,
+				},{
+					test: /\.(png|svg)$/,
+					type: 'asset/inline',
+				},
+				babel_loader,
+			],
+		},
+
+		plugins: [
+
+			new HtmlWebpackPlugin({
+				filename: `${outName}.html`,
+				template: `${srcDir}/main.html`,
+			}),
+
+			new MiniCssExtractPlugin({
+				filename: `${outName}.css`,
+			}),
+
 		],
-	},
 
-	plugins: [
+		optimization: {
+			minimizer: [
+				`...`,
+				new CssMinimizerPlugin(),
+			],
+		},
 
-		new MiniCssExtractPlugin({
-			filename: 'mskt.css',
-		}),
+	};
+}
 
-	],
 
-	optimization: {
-		minimizer: [
-			`...`,
-			new CssMinimizerPlugin(),
-		],
-	},
+module.exports = ( env, argv ) => {
 
-},{
-	/////////////////////////////////// MSK Grafik
+	const cfg = getCfg( env, argv );
 
-	entry: './lib/mskgr.js',
+	if ( env.WEBPACK_SERVE ) {
+		if ( Array.isArray(cfg) ) {
+			throw( "Error: Only one item must be selected for 'webpack serve'" );
+		}
+		if ( cfg.stats ) {
+			delete( cfg.stats );
+		}
+		cfg.devtool = 'cheap-module-source-map';
+		cfg.devServer = {
+			open: {
+				target: [ cfg.output.filename.replace( /\.js$/, '.html' ) ],
+				app: {
+					name: 'chrome',
+					arguments: ['--remote-debugging-port=9222'],
+				}
+			}
+		}
+	}
 
-	output: {
-		path: path.resolve(__dirname, 'dist/libs'),
-		filename: 'mskgr.js',
-		library: 'mskgr',
-		libraryTarget: 'umd',
-		umdNamedDefine: true
-	},
-
-	devtool: false,
-
-	module: {
-		rules: [
-
-			{
-				test: /\.css$/,
-				use: [ MiniCssExtractPlugin.loader, 'css-loader' ],
-				exclude: /node_modules/,
-			},{
-				test: /\.(png|svg)$/,
-				type: 'asset/inline',
-			},
-			babel_loader,
-		],
-	},
-
-	plugins: [
-
-		new MiniCssExtractPlugin({
-			filename: 'mskgr.css',
-		}),
-
-	],
-
-	optimization: {
-		minimizer: [
-			`...`,
-			new CssMinimizerPlugin(),
-		],
-	},
-
-}];
+	return cfg;
+}

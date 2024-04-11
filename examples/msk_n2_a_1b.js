@@ -1,7 +1,7 @@
 import './main.css'
 
-import { baseInits } from '../lib/baseInits'
-import { numberLineWithAnnotations } from '../lib/numberLineWithAnnotations'
+import { baseInits } from '../libs/baseInits'
+import { numberLineWithAnnotations } from '../libs/numberLineWithAnnotations'
 
 const varNam = "1b";
 
