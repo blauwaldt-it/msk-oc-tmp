@@ -48,12 +48,7 @@ module.exports = [{
 				exclude: /node_modules/,
 			},{
 				test: /\.(png|svg)$/,
-				use: [{
-					loader: 'file-loader',
-					options: {
-						name: 'msk_[name].[ext]',
-					}
-				}]
+				type: 'asset/inline',
 			},
 			babel_loader,
 		],
@@ -98,12 +93,7 @@ module.exports = [{
 				exclude: /node_modules/,
 			},{
 				test: /\.(png|svg)$/,
-				use: [{
-					loader: 'file-loader',
-					options: {
-						name: 'msk_[name].[ext]',
-					}
-				}]
+				type: 'asset/inline',
 			},
 			babel_loader,
 		],

@@ -40,12 +40,7 @@ const getWebPackConfig = ( data, env, argv ) => ({
 				exclude: /node_modules/,
 			},{
 				test: /\.(png|svg)$/,
-				use: [{
-					loader: 'file-loader',
-					options: {
-						name: '[name].[ext]',
-					}
-				}]
+				type: 'asset/inline',
 			// },{
 			// 	test: /\.html$/,
 			// 	use: ['html-loader']
