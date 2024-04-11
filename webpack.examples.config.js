@@ -6,11 +6,11 @@ const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 
-const dist_dir = "examples/dist";
+const dist_dir = "dist/examples";
 
 const getWebPackConfig = ( data, env, argv ) => ({
 
-	context: path.resolve(__dirname, 'examples/src'),
+	context: path.resolve(__dirname, 'examples'),
 	entry: `./${data.srcJs == '[fn]' ? `${data.item}_${data.fnExt}` : data.srcJs}.js`,
 	output: {
 		path: path.resolve(__dirname, dist_dir ),
@@ -93,7 +93,7 @@ const getWebPackConfig = ( data, env, argv ) => ({
 //////////////////////////////////////////////////////////////////////////////
 
 // get bundle definitions
-const { itemData } = require('./examples/src/itemData');
+const { itemData } = require('./examples/itemData');
 
 
 // add definitions for overview

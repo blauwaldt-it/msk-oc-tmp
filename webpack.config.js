@@ -31,7 +31,7 @@ module.exports = [{
 	entry: './lib/mskt.js',
 
 	output: {
-		path: path.resolve(__dirname, 'dist'),
+		path: path.resolve(__dirname, 'dist/libs'),
 		filename: 'mskt.js',
 		library: 'mskt',
 		libraryTarget: 'umd',
@@ -80,7 +80,7 @@ module.exports = [{
 	entry: './lib/mskgr.js',
 
 	output: {
-		path: path.resolve(__dirname, 'dist'),
+		path: path.resolve(__dirname, 'dist/libs'),
 		filename: 'mskgr.js',
 		library: 'mskgr',
 		libraryTarget: 'umd',
