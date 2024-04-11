@@ -20,14 +20,14 @@ div.textareaInserts > div:first-child:empty:before {
 }
 
 /* toolbar container */
-div.textareaInserts div.toolbar.column {
+div.textareaInserts div.toolbar.ticolumn {
     display: flex;
     flex-direction: column;
     position: absolute;
     cursor: pointer;
     border: none;
 }
-div.textareaInserts div.toolbar.row {
+div.textareaInserts div.toolbar.tirow {
     display: flex;
     flex-direction: row;
     position: absolute;
@@ -43,10 +43,10 @@ div.textareaInserts div.toolbar > div {
     height: 35px;
     border: 1px solid black;
 }
-div.textareaInserts div.toolbar.column > div:not(:first-child) {
+div.textareaInserts div.toolbar.ticolumn > div:not(:first-child) {
     border-top: none;
 }
-div.textareaInserts div.toolbar.row > div:not(:first-child) {
+div.textareaInserts div.toolbar.tirow > div:not(:first-child) {
     border-left: none;
 }
 
@@ -57,7 +57,7 @@ div.textareaInserts div.toolbar > div > span {
 }
 
 div.textareaInserts div.toolbar.disabled > div > span {
-    color: lightgray;
+    opacity: 0.2;
 }
 
 /* fraction */
@@ -68,7 +68,7 @@ div.textareaInserts .frac {
     letter-spacing: 0.001em;
     text-align: center;
     white-space: normal;
-    /* margin-bottom: 0.2em;   /* vertical centering */
+    margin-bottom: 0.2em;   /* vetical centering */
     padding: 0px;
 }
 div.textareaInserts .frac > span {
@@ -77,17 +77,17 @@ div.textareaInserts .frac > span {
 div.textareaInserts .frac > span.bottom {
     border-top: thin solid black;
 }
-div.textareaInserts div.toolbar.disabled .frac > span.bottom {
-    border-top: thin solid lightgray;
-}
 div.textareaInserts .frac span:empty:before {
     content: "⬚";
 }
-div.textareaInserts div.toolbar .frac span {
-    /* font-size: 90%; */
-    padding-left: 0.1em;
-    padding-right: 0.1em;
+
+div.textareaInserts div.toolbar .frac {
+    margin-bottom: 0em;
+    position: absolute;
 }
-div.textareaInserts div.toolbar div.frac {
-    font-size: 65%;
+div.textareaInserts div.toolbar .frac img {
+    position: relative;
+    top: -0.55em;
+    left: -0.45em;
+    width: 1em;
 }
